@@ -777,39 +777,69 @@
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('header');
-            const navLinks = document.querySelectorAll('nav ul li a');
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('nav ul li a');
 
-            // Function to hide header
-            const hideHeader = () => {
-                header.classList.add('header-hidden');
-            };
+    // Function to hide header
+    const hideHeader = () => {
+        header.classList.add('header-hidden');
+    };
 
-            // Function to show header
-            const showHeader = () => {
-                header.classList.remove('header-hidden');
-            };
+    // Function to show header
+    const showHeader = () => {
+        header.classList.remove('header-hidden');
+    };
 
-            // Show header when user scrolls up
-            let lastScrollTop = 0;
-            window.addEventListener('scroll', () => {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Check if the device is in portrait mode
+    const isPortrait = () => window.matchMedia("(orientation: portrait)").matches;
 
-                if (scrollTop < lastScrollTop) {
-                    showHeader(); // Scrolling up
-                } else {
-                    hideHeader(); // Scrolling down
-                }
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-            });
+    // Set up event listeners only if in portrait mode
+    if (isPortrait()) {
+        // Show header when user scrolls up
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            // Hide header when clicking on a navigation link
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    hideHeader();
-                });
+            if (scrollTop < lastScrollTop) {
+                showHeader(); // Scrolling up
+            } else {
+                hideHeader(); // Scrolling down
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+
+        // Hide header when clicking on a navigation link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hideHeader();
             });
         });
+
+        // Optional: Listen for orientation changes and reapply the logic
+        window.addEventListener('resize', () => {
+            if (isPortrait()) {
+                // Reapply event listeners if orientation changes to portrait
+                window.addEventListener('scroll', () => {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                    if (scrollTop < lastScrollTop) {
+                        showHeader(); // Scrolling up
+                    } else {
+                        hideHeader(); // Scrolling down
+                    }
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+                });
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hideHeader();
+                    });
+                });
+            }
+        });
+    }
+});
+
     </script>
 
 </body>
