@@ -28,7 +28,8 @@ body {
 }
 
 
-a:focus, button:focus {
+a:focus,
+button:focus {
     outline: 2px dashed var(--picton-blue);
 }
 
@@ -45,13 +46,12 @@ a:focus, button:focus {
     }
 }
 
-
 .institution,
 .date-range,
 .location,
 .marks {
     font-size: medium;
-    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
     color: #666;
     margin-left: 1em;
     margin-bottom: 0.25em;
@@ -78,7 +78,7 @@ a:focus, button:focus {
 .location span,
 .marks span {
     font-size: smaller;
-    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
     color: #666;
     margin-left: 1em;
 }
@@ -97,32 +97,15 @@ body {
     padding: 20px;
 }
 
+/* Layout Styles */
+
 .container {
     display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-    margin: 0 auto;
-    max-width: 1200px;
+    flex-direction: column;
+    height: 100vh;
 }
 
 /* Header Styles */
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: var(--white);
-    padding: 20px;
-    box-shadow: 2px 0 1em rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    flex-direction: column;
-    overflow-y: auto;
-    border-right: 1px solid var(--prussian-blue);
-    display: flex;
-    align-items: center;
-}
 
 .header-left {
     display: flex;
@@ -153,31 +136,157 @@ header p {
     margin-bottom: 20px;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--prussian-blue);
+/* Hide header */
+.header-hidden {
+    display: none;
 }
+
+
+/* Header when in portrait mode (vertical) */
+/* Header when in portrait mode (vertical) */
+@media (orientation: portrait) {
+    header {
+        width: 100%;
+        height: auto; /* Adjust height based on content */
+        padding: 10px 0;
+        position: relative; /* Allows the header to scroll with content if necessary */
+        background-color: var(--white); /* Ensure visibility */
+        box-sizing: border-box; /* Include padding in height calculation */
+        display: flex; /* Enable flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        z-index: 1000; /* Ensure header is on top of content */
+        transition: transform 0.3s ease; /* Smooth transition for hiding/showing */
+    }
+
+    .header-hidden {
+        transform: translateY(-100%); /* Slide header out of view */
+    }
+
+    .profile-pic {
+        width: 75px; /* Small profile picture */
+        height: 75px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--prussian-blue);
+        margin-bottom: 10px; /* Space between picture and name */
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Center align navigation items */
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+        align-items: center; /* Center items */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Space between navigation items */
+    }
+
+    nav ul li a {
+        display: block;
+        color: var(--cerulean);
+        padding: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.2s;
+        width: 100%; /* Full width for clickable area */
+        text-align: center; /* Center align text */
+    }
+
+    nav ul li a:hover {
+        background-color: var(--prussian-blue);
+        color: var(--white);
+        transform: scale(1.05);
+        border-radius: 4px;
+    }
+
+    .content {
+        margin-top: 20%; /* Adjust this value to ensure it pushes the content below the header */
+        padding: 10px;
+        box-sizing: border-box; /* Include padding in height calculation */
+        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-x: hidden; /* Disable horizontal scrolling */
+        height: calc(100vh - 20%); /* Adjust to fit the viewport minus header height */
+        position: relative; /* Keep content in normal flow */
+        z-index: 1; /* Ensure content is below the header */
+    }
+}
+
+/* Header when in landscape mode (horizontal) */
+@media (orientation: landscape) {
+    header {
+        width: 30%; /* Fixed width for landscape mode */
+        height: 100%; /* Full height */
+        padding: 10px 0;
+        flex-direction: column;
+        border-right: 1px solid var(--prussian-blue);
+        border-bottom: none;
+        position: fixed; /* Keep the header fixed on the screen */
+        top: 0;
+        left: 0;
+        background-color: var(--white); /* Ensure visibility */
+        display: flex; /* Enable flexbox layout */
+        align-items: center; /* Center items horizontally */
+        z-index: 1000; /* Ensure header is on top of content */
+    }
+
+    .profile-pic {
+        width: 150px; /* Larger profile picture for landscape mode */
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--prussian-blue);
+        margin-bottom: 20px; /* Space between picture and name */
+    }
+
+    .content {
+        margin-left: 30%; /* Ensure content is not hidden under the header */
+        padding: 10px;
+        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-x: hidden; /* Disable horizontal scrolling */
+        height: 100vh; /* Full viewport height */
+        box-sizing: border-box; /* Include padding in height calculation */
+        position: relative; /* Keep content in normal flow */
+        z-index: 1; /* Ensure content is below the header */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+}
+
+
+
 
 /* Navigation Bar Styles */
 
-nav {
-    margin-top: 20px;
-}
+
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0;
 }
 
 nav ul li a {
     display: block;
     color: var(--cerulean);
-    text-align: center;
-    padding: 1em;
+    padding: 10px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -192,7 +301,8 @@ nav ul li a:hover {
 /* Content Styles */
 
 .content {
-    margin-left: 251px;
+    margin-top: 70px;
+    /* Margin to ensure content is not hidden under the header */
     padding: 10px;
     flex: 1;
     overflow-y: auto;
@@ -200,8 +310,7 @@ nav ul li a:hover {
 
 /* Section Styles */
 
-section
-{
+section {
     margin-bottom: 10px;
     padding: 12px;
     background-color: var(--white);
@@ -228,13 +337,12 @@ section h4 {
     display: list-item;
     margin-left: 1em;
     color: var(--rich-black);
-    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
 }
 
 section p {
     margin-left: 1em;
-    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
-
+    font-family: "Recta W01 Medium Condensed", serif;
 }
 
 
