@@ -1,0 +1,322 @@
+/* Variables and Global Styles */
+
+:root {
+    --white: hsla(0, 0%, 100%, 1);
+    --rich-black: hsla(195, 100%, 6%, 1);
+    --prussian-blue: rgb(0, 49, 83);
+    --cerulean: hsla(195, 100%, 33%, 1);
+    --picton-blue: hsla(197, 100%, 45%, 1);
+    --primary-color: var(--prussian-blue);
+    --gradient-top: linear-gradient(0deg,
+            var(--white),
+            var(--rich-black),
+            var(--prussian-blue),
+            var(--cerulean),
+            var(--picton-blue));
+}
+
+* {
+    box-sizing: border-box;
+    font-family: monospace, monospace, sans-serif;
+}
+
+
+
+body {
+    background-color: var(--white);
+    color: var(--rich-black);
+}
+
+
+a:focus, button:focus {
+    outline: 2px dashed var(--picton-blue);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.institution,
+.date-range,
+.location,
+.marks {
+    font-size: medium;
+    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    color: #666;
+    margin-left: 1em;
+    margin-bottom: 0.25em;
+}
+
+.location::before {
+    content: "📍";
+}
+
+.date-range::before {
+    content: "📅";
+}
+
+.institution::before {
+    content: "🏫";
+}
+
+.marks::before {
+    content: "📚"
+}
+
+.institution span,
+.date-range span,
+.location span,
+.marks span {
+    font-size: smaller;
+    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    color: #666;
+    margin-left: 1em;
+}
+
+/* Layout Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--white);
+    color: var(--rich-black);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header Styles */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 2px 0 1em rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    flex-direction: column;
+    overflow-y: auto;
+    border-right: 1px solid var(--prussian-blue);
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: var(--prussian-blue);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: var(--prussian-blue);
+}
+
+header p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--prussian-blue);
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-pic-container {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--prussian-blue);
+}
+
+/* Navigation Bar Styles */
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--cerulean);
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: var(--prussian-blue);
+    color: var(--white);
+    transform: scale(1.05);
+    border-radius: 4px;
+}
+
+/* Content Styles */
+
+.content {
+    margin-left: 251px;
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Section Styles */
+
+section
+{
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: var(--white);
+    border-radius: 1em;
+    box-shadow: 0 2px 1em rgba(0, 0, 0, 0.2);
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: var(--prussian-blue);
+    border-bottom: 2px solid var(--cerulean);
+    padding-bottom: 5px;
+}
+
+section h3 {
+    display: list-item;
+    margin-left: 1em;
+    color: var(--rich-black);
+}
+
+section h4 {
+    display: list-item;
+    margin-left: 1em;
+    color: var(--rich-black);
+    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+}
+
+section p {
+    margin-left: 1em;
+    font-family:  "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+
+}
+
+
+
+/* List Styles */
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Contact Icons Styles */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 20px;
+}
+
+.contact a {
+    margin: 0;
+}
+
+.contact-icon {
+    vertical-align: middle;
+}
+
+
+/* Publication Buttons Styles */
+
+.popup-button button,
+.popup-button a {
+    margin-right: 1em;
+    margin-left: 1em;
+    padding: 1em 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--cerulean);
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.popup-button button:hover,
+.popup-button a:hover {
+    background-color: var(--prussian-blue);
+    transform: scale(1.05);
+}
+
+/* Summary Styles */
+
+.summary {
+    display: none;
+    background-color: #f8f8f8;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 1em;
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: darkslategrey;
+    font-weight: lighter;
+}
+
+.summary.visible {
+    display: block;
+    opacity: 1;
+    max-height: 1000px;
+}
+
+.close-summary {
+    position: absolute;
+    top: 5px;
+    right: 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Greta Dolcetti's professional portfolio and academic achievements. PhD student at Ca' Foscari University of Venice specializing in computer science and research.">
+    <title>Greta Dolcetti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://db.onlinewebfonts.com/c/e43ccd3c2c2c13628d86f0b1b5a580d3?family=Recta+W01+Medium+Condensed"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="profile-info">
+                <div class="profile-pic-container">
+                    <img src="assets/Greta_small.png" alt="Profile Picture" class="profile-pic">
+                </div>
+                <h2>Greta Dolcetti</h2>
+                <p>PhD Student @ Ca' Foscari University of Venice</p>
+                <p>SSV Research Group</p>
+                <div class="contact">
+                    <a href="mailto:greta.dolcetti@unive.it">
+                        <img src="assets/mail-icon.svg" alt="Email Icon" class="contact-icon" width="30px">
+                    </a>
+                    <a href="https://github.com/gretadolcetti" target="_blank">
+                        <img src="assets/github-icon.svg" alt="GitHub Icon" class="contact-icon" width="30px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/greta-dolcetti-2b2227185/" target="_blank">
+                        <img src="assets/linkedin-icon.svg" alt="LinkedIn Icon" class="contact-icon" width="30px">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=Wad3G5MAAAAJ&hl=it" target="_blank">
+                        <img src="assets/scholar-icon.svg" alt="Google Scholar Icon" class="contact-icon" width="30px">
+                    </a>
+                    <a href="assets/cv.pdf" target="_blank">
+                        <img src="assets/cv-icon.png" alt="CV Icon" class="contact-icon" width="30px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="#bio">Short Bio</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#work-experience">Work Experience</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <!-- <li><a href="#teaching">Teaching</a></li> -->
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <section id="bio">
+            <h2>Short Bio</h2>
+            <p>I obtained my Bachelor's Degree in Computer Science in September 2021 and my Master's Degree in July
+                2023, both from the University of Parma. During my Master's thesis, titled "Abstract Compilation
+                Techniques for Static Analysis", I began working in the field of static analysis by abstract
+                interpretation. Under the supervision of Professors Arceri and Zaffanella, I implemented two abstract
+                compilation techniques focusing on the accuracy/efficiency trade-off.
+                During my Master's degree, I also collaborated with the Department of Food and Drugs at the University
+                of Parma on a research project that involved using constraint programming and molecular modeling methods
+                to predict possible protein mutations of the SARS-CoV-2 virus.</p>
+
+            <p>I am currently a Ph.D. student at Ca’ Foscari University of Venice, where my research interests include
+                static analysis, abstract interpretation, and, more broadly, formal methods for program verification
+                with a major focus on data science and artificial intelligence.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Ph.D. Student in Computer Science</h3>
+                <div class="institution">
+                    <span>Ca' Foscari University of Venice</span>
+                </div>
+                <div class="date-range">
+                    <span>09/2023 – Current</span>
+                </div>
+                <div class="location">
+                    <span>Venice, Italy</span>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>Master's Degree in Computer Science</h3>
+                <p>Thesis: Abstract Compilation Techniques for Static Analysis</p>
+                <p>Advisor: Prof. Enea Zaffanella</p>
+
+                <div class="institution">
+                    <span>University of Parma</span>
+                </div>
+                <div class="date-range">
+                    <span>09/2021 – 13/07/2023</span>
+                </div>
+                <div class="location">
+                    <span>Parma, Italy</span>
+                </div>
+                <div class="marks">
+                    <span>Final grade: 110L/110 | Level in EQF: 7</span>
+                </div>
+                <div class="popup-button">
+                    <button class="show-summary" data-target="#ms-summary">Thesis Summary</button>
+                </div>
+                <div id="ms-summary" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>The main contribution of the thesis was the implementation of two instances of abstract
+                        compilation techniques in the Crab/Clam static analysis framework: the split operator and the
+                        likely unconstrained variable oracles.</p>
+                    <p>The former provides a new operator and approach for the filter operation on a predicate on
+                        abstract domains, avoiding the inefficiencies of the default procedure, and improving the
+                        efficiency of the analysis without losing precision.</p>
+                    <p>The latter proposes four different implementations of an oracle whose purpose is to suggest which
+                        variables are likely to be unconstrained in the CFG's statements. By systematically propagating
+                        the guessed lack of information, the oracle guides the simplification of the abstract program,
+                        leading to remarkable speedups.</p>
+
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor's Degree in Computer Science</h3>
+                <p>Thesis: Development of an Interface for Explainable AI for CAT Scan Analysis</p>
+                <p>Advisor: Prof. Alessandro Dal Palù</p>
+                <div class="institution">
+                    <span>University of Parma</span>
+                </div>
+                <div class="date-range">
+                    <span>09/2018 – 09/2021</span>
+                </div>
+                <div class="location">
+                    <span>Parma, Italy</span>
+                </div>
+                <div class="marks">
+                    <span>Final grade: 110/110 | Level in EQF: 6</span>
+                </div>
+                <div class="popup-button">
+                    <button class="show-summary" data-target="#bs-summary">Thesis Summary</button>
+                </div>
+                <div id="bs-summary" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>The main contribution of the thesis is the implementation of a framework that allows the user to
+                        understand clearly, in natural language, the motivations behind the result (i.e., the arteries
+                        retrieved inside the CAT scan and their connections) produced by the Answer Set Programming
+                        reasoner. The framework allows the user to also add new rules, expressed in natural language and
+                        then translated in AnsProlog, to the knowledge base used by the reasoner.</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>High School Diploma (Maturità Classica)</h3>
+                <div class="institution">
+                    <span>Liceo Classico Enrico Fermi</span>
+                </div>
+                <div class="date-range">
+                    <span>09/2013 – 06/2018</span>
+                </div>
+                <div class="location">
+                    <span>Salò, Italy</span>
+                </div>
+                <div class="marks">
+                    <span>Final grade: 89/100</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <div class="work-item">
+                <h3>Research Scholarship</h3>
+                <div class="institution">
+                    <span> University of Parma</span>
+                </div>
+                <div class="location">
+                    <span>Parma, Italy</span>
+                </div>
+                <div class="date-range">
+                    <span>12/2021 – 03/2022</span>
+                </div>
+                <p>Research by constraint programming and molecular modeling methods of possible protein mutations of
+                    the SARS-CoV-2 virus.</p>
+            </div>
+        </section>
+
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <h4>Dolcetti G., Cortesi A., Urban C. & Zaffanella E. (2024). Towards a High Level Linter for Data Science.
+                Proceedings of 10th International Workshop on Numerical and Symbolic Abstract Domains (NSAD 2024), 22
+                October 2024, Pasadena, California, United States.</h4>
+            <div class="popup-button">
+                <button class="show-summary" data-target="#bib-summary-1">BIB</button>
+                <button class="show-summary" data-target="#abstract-summary-1">Abstract</button>
+                <a href="#" target="_blank">Link</a>
+            </div>
+            <div id="bib-summary-1" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>TBA</p>
+            </div>
+            <div id="abstract-summary-1" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>
+                    Due to its interdisciplinary nature, the development of data
+                    science code is subject to a wide range of potential mistakes
+                    that can easily compromise the final results. Several tools
+
+                    have been proposed that can help the data scientist in identi-
+                    fying the most common, low level programming issues. We
+
+                    discuss the steps needed to implement a tool that is rather
+                    meant to focus on higher level errors that are specific of
+                    the data science pipeline. To this end, we propose a static
+                    analysis assigning ad hoc abstract datatypes to the program
+
+                    variables, which are then checked for consistency when call-
+                    ing functions defined in data science libraries. By adopting a
+
+                    descriptive (rather than prescriptive) abstract type system,
+                    we obtain a linter tool reporting data science related code
+
+                    smells. While being still work in progress, the current proto-
+                    type is able to identify and report the code smells contained
+
+                    in several examples of questionable data science code.
+                </p>
+            </div>
+
+            <h4>Arceri V., Merenda S. M., Dolcetti G., Negrini L., Olivieri L., & Zaffanella E. (2024). Towards a Sound
+                Construction of EVM Bytecode Control-flow Graphs. Proceedings of Formal Techniques for Java-like
+                Programs (FTfJP 2024), 20 September 2024, Vienna, Austria.</h4>
+            <div class="popup-button">
+                <button class="show-summary" data-target="#bib-summary-2">BIB</button>
+                <button class="show-summary" data-target="#abstract-summary-2">Abstract</button>
+                <a href="#" target="_blank">Link</a>
+            </div>
+            <div id="bib-summary-2" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>TBA</p>
+            </div>
+            <div id="abstract-summary-2" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>Ethereum enables the creation and execution of decentralized applications through smart contracts,
+                    that are compiled to Ethereum Virtual Machine (EVM) bytecode. Once deployed in the blockchain, the
+                    bytecode is immutable; hence, ensuring that smart contracts are bug-free before their deployment is
+                    of utmost importance. A crucial preliminary step for any effective static analysis of EVM bytecode
+                    is the extraction of the control-flow graph (CFG): this presents significant challenges due to
+                    dynamically computed jump destinations. In this paper we present a novel approach, based on abstract
+                    intepretation, aiming at building a sound CFG from EVM bytecode smart contracts. Our analysis, which
+                    is implemented in our static analyzer EVMLiSA, is based on a parametric abstract domain that
+                    approximates concrete execution stacks at each program point as a $l$-sized set of abstract stacks
+                    of maximal height $h$; the results of the analysis are then used to resolve the jump destinations at
+                    jump nodes. On our preliminary experiments, by fine-tuning the analysis parameters, EVMLiSA achives
+                    sound CFGs for all smart contracts where permantent storage-related opcodes do not influence jump
+                    destinations.</p>
+            </div>
+
+            <h4>Arceri V., Dolcetti G. & Zaffanella E. (2024). Speeding up Static Analysis with the Split Operator.
+                International Journal on Software Tools for Technology Transfer, Special Issue for SOAP 2023.</h4>
+            <div class="popup-button">
+                <button class="show-summary" data-target="#bib-summary-3">BIB</button>
+                <button class="show-summary" data-target="#abstract-summary-3">Abstract</button>
+                <a href="#" target="_blank">Link</a>
+            </div>
+            <div id="bib-summary-3" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p> TBA </p>
+            </div>
+            <div id="abstract-summary-3" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>TBA</p>
+            </div>
+
+            <h4>Arceri V., Dolcetti G. & Zaffanella E. (2023). Speeding up Static Analysis with the Split Operator.
+                Proceedings of 12th ACM SIGPLAN International Workshop on the State of the Art in Program Analysis,
+                SOAP@PLDI 2023, June 17, 2023, Orlando, Florida, United States.</h4>
+            <div class="popup-button">
+                <button class="show-summary" data-target="#bib-summary-4">BIB</button>
+                <button class="show-summary" data-target="#abstract-summary-4">Abstract</button>
+                <a href="https://doi.org/10.1145/3589250.3596141" target="_blank">Link</a>
+            </div>
+            <div id="bib-summary-4" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>@inproceedings{DBLP:conf/pldi/ArceriDZ23,
+                    author = {Vincenzo Arceri and
+                    Greta Dolcetti and
+                    Enea Zaffanella},
+                    editor = {Pietro Ferrara and
+                    Liana Hadarean},
+                    title = {Speeding up Static Analysis with the Split Operator},
+                    booktitle = {Proceedings of the 12th {ACM} {SIGPLAN} International Workshop on
+                    the State Of the Art in Program Analysis, {SOAP} 2023, Orlando, FL,
+                    USA, 17 June 2023},
+                    pages = {14--19},
+                    publisher = {{ACM}},
+                    year = {2023},
+                    url = {https://doi.org/10.1145/3589250.3596141},
+                    doi = {10.1145/3589250.3596141},
+                    timestamp = {Sun, 12 Nov 2023 02:12:56 +0100},
+                    biburl = {https://dblp.org/rec/conf/pldi/ArceriDZ23.bib},
+                    bibsource = {dblp computer science bibliography, https://dblp.org}
+                    }</p>
+            </div>
+            <div id="abstract-summary-4" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>In the context of static analysis based on Abstract Interpretation, we propose a new abstract
+                    operator modeling the split
+                    of control flow paths: the goal of the operator is to enable a
+                    more efficient analysis when using abstract domains that are
+                    computationally expensive, having no effect on precision.
+                    Focusing on the case of conditional branches guarded by
+                    numeric linear constraints, we provide a preliminary experimental evaluation showing that, by using
+                    the split operator,
+                    we can achieve significant efficiency improvements for a
+                    static analysis based on the domain of convex polyhedra. We
+                    also briefly discuss the applicability of this new operator to
+                    different, possibly non-numeric abstract domains.</p>
+            </div>
+
+            <h4>Arceri V., Dolcetti G. & Zaffanella E. (2023). Unconstrained Variable Oracles for Faster Static
+                Analyses.
+                Proceedings of 30th Static Analysis Symposium, SAS 2023, Sun 22 - Tue 24 October 2023 Cascais, Portugal.
+            </h4>
+            <div class="popup-button">
+                <button class="show-summary" data-target="#bib-summary-5">BIB</button>
+                <button class="show-summary" data-target="#abstract-summary-5">Abstract</button>
+                <a href="https://doi.org/10.1007/978-3-031-44245-2_5" target="_blank">Link</a>
+            </div>
+            <div id="bib-summary-5" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>@inproceedings{DBLP:conf/sas/ArceriDZ23,
+                    author = {Vincenzo Arceri and
+                    Greta Dolcetti and
+                    Enea Zaffanella},
+                    editor = {Manuel V. Hermenegildo and
+                    Jos{\'{e}} F. Morales},
+                    title = {Unconstrained Variable Oracles for Faster Numeric Static Analyses},
+                    booktitle = {Static Analysis - 30th International Symposium, {SAS} 2023, Cascais,
+                    Portugal, October 22-24, 2023, Proceedings},
+                    series = {Lecture Notes in Computer Science},
+                    volume = {14284},
+                    pages = {65--83},
+                    publisher = {Springer},
+                    year = {2023},
+                    url = {https://doi.org/10.1007/978-3-031-44245-2\_5},
+                    doi = {10.1007/978-3-031-44245-2\_5},
+                    timestamp = {Thu, 09 Nov 2023 21:13:04 +0100},
+                    biburl = {https://dblp.org/rec/conf/sas/ArceriDZ23.bib},
+                    bibsource = {dblp computer science bibliography, https://dblp.org}
+                    }</p>
+            </div>
+            <div id="abstract-summary-5" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>In the context of static analysis based on Abstract Interpretation, we propose a lightweight
+                    pre-analysis step which is meant to suggest, at each program point, which program variables are
+                    likely to be unconstrained for a specific class of numeric abstract properties. Using the outcome of
+                    this pre-analysis as an oracle, we simplify the statements of the program being analyzed by
+                    propagating this lack of information, aiming at fine-tuning the precision/efficiency trade-off of
+                    the analysis. A preliminary experimental evaluation shows that the idea underlying the approach is
+                    promising, as it improves the efficiency of the more costly analysis while having a limited effect
+                    on its precision.</p>
+            </div>
+
+            <h4>Cozzini, P., Agosta, F., Dolcetti, G., & Dal Palù, A. (2023). A Computational Workflow to Predict
+                Biological Target Mutations: The Spike Glycoprotein Case Study. Molecules, 28(20), 7082.</h4>
+            <div class="popup-button">
+                <button class="show-summary" data-target="#bib-summary-6">BIB</button>
+                <button class="show-summary" data-target="#abstract-summary-6">Abstract</button>
+                <a href="https://doi.org/10.3390/molecules28207082" target="_blank">Link</a>
+            </div>
+            <div id="bib-summary-6" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>
+                    @Article{molecules28207082,
+                    AUTHOR = {Cozzini, Pietro and Agosta, Federica and Dolcetti, Greta and Dal Palù, Alessandro},
+                    TITLE = {A Computational Workflow to Predict Biological Target Mutations: The Spike Glycoprotein
+                    Case Study},
+                    JOURNAL = {Molecules},
+                    VOLUME = {28},
+                    YEAR = {2023},
+                    NUMBER = {20},
+                    ARTICLE-NUMBER = {7082},
+                    URL = {https://www.mdpi.com/1420-3049/28/20/7082},
+                    PubMedID = {37894561},
+                    ISSN = {1420-3049},
+                    ABSTRACT = {The biological target identification process, a pivotal phase in the drug discovery
+                    workflow, becomes particularly challenging when mutations affect proteins’ mechanisms of action.
+                    COVID-19 Spike glycoprotein mutations are known to modify the affinity toward the human
+                    angiotensin-converting enzyme ACE2 and several antibodies, compromising their neutralizing effect.
+                    Predicting new possible mutations would be an efficient way to develop specific and efficacious
+                    drugs, vaccines, and antibodies. In this work, we developed and applied a computational procedure,
+                    combining constrained logic programming and careful structural analysis based on the Structural
+                    Activity Relationship (SAR) approach, to predict and determine the structure and behavior of new
+                    future mutants. “Mutations rules” that would track statistical and functional types of substitutions
+                    for each residue or combination of residues were extracted from the GISAID database and used to
+                    define constraints for our software, having control of the process step by step. A careful molecular
+                    dynamics analysis of the predicted mutated structures was carried out after an energy evaluation of
+                    the intermolecular and intramolecular interactions using the HINT (Hydrophatic INTeraction) force
+                    field. Our approach successfully predicted, among others, known Spike mutants.},
+                    DOI = {10.3390/molecules28207082}
+                    }
+                </p>
+            </div>
+            <div id="abstract-summary-6" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>The biological target identification process, a pivotal phase in the drug discovery workflow, becomes
+                    particularly challenging when mutations affect proteins’ mechanisms of action. COVID-19 Spike
+                    glycoprotein mutations are known to modify the affinity toward the human angiotensin-converting
+                    enzyme ACE2 and several antibodies, compromising their neutralizing effect. Predicting new possible
+                    mutations would be an efficient way to develop specific and efficacious drugs, vaccines, and
+                    antibodies. In this work, we developed and applied a computational procedure, combining constrained
+                    logic programming and careful structural analysis based on the Structural Activity Relationship
+                    (SAR) approach, to predict and determine the structure and behavior of new future mutants.
+                    “Mutations rules” that would track statistical and functional types of substitutions for each
+                    residue or combination of residues were extracted from the GISAID database and used to define
+                    constraints for our software, having control of the process step by step. A careful molecular
+                    dynamics analysis of the predicted mutated structures was carried out after an energy evaluation of
+                    the intermolecular and intramolecular interactions using the HINT (Hydrophatic INTeraction) force
+                    field. Our approach successfully predicted, among others, known Spike mutants.</p>
+            </div>
+
+            <h4>Cozzini, P., Agosta, F., Dolcetti, G., & Righi, G. (2022). How a Blockchain Approach Can Improve Data
+                Reliability in the COVID-19 Pandemic. ACS Medicinal Chemistry Letters, 13(4), 517-519.</h4>
+            <div class="popup-button">
+                <button class="show-summary" data-target="#bib-summary-7">BIB</button>
+                <button class="show-summary" data-target="#abstract-summary-7">Abstract</button>
+                <a href="https://doi.org/10.1021/acsmedchemlett.2c00077" target="_blank">Link</a>
+            </div>
+            <div id="bib-summary-7" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>
+                    @article{cozzini2022blockchain,
+                    title={How a Blockchain Approach Can Improve Data Reliability in the COVID-19 Pandemic},
+                    author={Cozzini, Pietro and Agosta, Federica and Dolcetti, Greta and Righi, Gianfranco},
+                    journal={ACS Medicinal Chemistry Letters},
+                    volume={13},
+                    number={4},
+                    pages={517--519},
+                    year={2022},
+                    publisher={ACS Publications}
+                    }
+                </p>
+            </div>
+            <div id="abstract-summary-7" class="summary">
+                <button class="close-summary">
+                    <span>&times;</span>
+                </button>
+                <p>The rapid spread of COVID-19 made it necessary to quickly collect and share viral genomic sequences,
+                    sometimes making quantity prevail over the quality of information. Can research pay this price?
+                    Blockchain technology, based on the concept of a ledger that guarantees the authenticity and
+                    traceability of information, could be the best applicable solution.</p>
+            </div>
+        </section>
+
+
+        <!-- <section id="teaching">
+            <h2>Teaching</h2>
+
+            <div class="teaching-item">
+                <h3>Teaching Assistant</h3>
+                <div class="institution">
+                    <span>University of Parma</span>
+                </div>
+                <div class="date-range">
+                    <span>09/2022 – 06/2023</span>
+                </div>
+                <div class="location">
+                    <span>Parma, Italy</span>
+                </div>
+                <p>Course: Fondamenti di Programmazione A+B</p>
+                <p>Professor: Prof. Arceri Vincenzo</p>
+                <p>Hours: 48</p>
+            </div>
+
+            <div class="teaching-item">
+                <h3>Tutoring</h3>
+                <div class="institution">
+                    <span>University of Parma</span>
+                </div>
+                <div class="date-range">
+                    <span>09/2022 – 06/2023</span>
+                </div>
+                <div class="location">
+                    <span>Parma, Italy</span>
+                </div>
+                <p>Course: Computer Science B.Sc.</p>
+                <p>Hours: 48</p>
+            </div>
+
+            <div class="teaching-item">
+                <h3>Teaching Assistant</h3>
+                <div class="institution">
+                    <span>Ragazze Digitali project</span>
+                </div>
+                <div class="date-range">
+                    <span>06/2022 – 07/2022</span>
+                </div>
+                <div class="location">
+                    <span>Parma, Italy</span>
+                </div>
+                <p>Hours: 70</p>
+            </div>
+
+            <div class="teaching-item">
+                <h3>Teaching Assistant</h3>
+                <div class="institution">
+                    <span>Ragazze Digitali project</span>
+                </div>
+                <div class="date-range">
+                    <span>08/2023 – 09/2023</span>
+                </div>
+                <div class="location">
+                    <span>Parma, Italy</span>
+                </div>
+                <p>Hours: 26</p>
+            </div>
+        </section> -->
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <h3>Languages</h3>
+            <p>
+                <a href="https://www.python.org" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                        alt="python" width="40" height="40" />
+                </a>
+                <a href="https://www.w3schools.com/cpp/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+                        alt="cplusplus" width="40" height="40" />
+                </a>
+                <a href="https://www.java.com" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                        alt="java" width="40" height="40" />
+                </a>
+                <a href="https://www.postgresql.org/" target="_blank">
+                    <img src="https://www.svgrepo.com/show/331760/sql-database-generic.svg" alt="sql" width="40"
+                        height="40" />
+                </a>
+                <a href="https://www.mathworks.com/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab"
+                        width="40" height="40" />
+                </a>
+                <a href="https://www.linux.org/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                        alt="linux" width="40" height="40" />
+                </a>
+                <a href="https://www.latex-project.org/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="latex" width="40"
+                        height="40" />
+                </a>
+            </p>
+
+            <h3>Frameworks and Tools</h3>
+            <p>
+                <a href="https://flask.palletsprojects.com/" target="_blank">
+                    <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40"
+                        height="40" />
+                </a>
+                <a href="https://www.docker.com/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
+                        alt="docker" width="40" height="40" />
+                </a>
+                <a href="https://kubernetes.io" target="_blank">
+                    <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes"
+                        width="40" height="40" />
+                </a>
+                <a href="https://pytorch.org/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/PyTorch_logo_black.svg/2880px-PyTorch_logo_black.svg.png"
+                        alt="pytorch" width="80" height="40" />
+                </a>
+                <a href="https://scikit-learn.org/stable/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2880px-Scikit_learn_logo_small.svg.png"
+                        alt="scikit-learn" width="80" height="40" />
+                </a>
+                <a href="https://pandas.pydata.org/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="pandas"
+                        width="80" height="40" />
+                </a>
+                <a href="https://numpy.org/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="numpy"
+                        width="80" height="40" />
+                </a>
+                <a href="https://matplotlib.org/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="matplotlib"
+                        width="40" height="40" />
+                </a>
+                <a href="https://seaborn.pydata.org/" target="_blank">
+                    <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="seaborn" width="80"
+                        height="40" />
+                </a>
+                <a href="https://git-scm.com/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="git" width="80"
+                        height="40" />
+                </a>
+            </p>
+
+            <h3>Web</h3>
+            <p>
+                <a href="https://www.w3schools.com/css/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                        alt="css3" width="40" height="40" />
+                </a>
+                <a href="https://www.w3.org/html/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                        alt="html5" width="40" height="40" />
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                        alt="javascript" width="40" height="40" />
+                </a>
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project-item">
+                <h3>Integration of PPLite Domains in Crab/Clam Static Analysis Framework</h3>
+                <p>Contributed to the Crab/Clam static analysis framework by integrating PPLite domains, enhancing the
+                    framework's capabilities for abstract interpretation.</p>
+                <div class="popup-button">
+                    <a href="https://github.com/seahorn/crab" target="_blank">Link</a>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Integration of the Decoupling Feature and Domains in Crab/Clam Static Analysis Framework</h3>
+                <p>Implemented the decoupling feature and integrated additional domains into the Crab/Clam static
+                    analysis framework, improving its modularity and efficiency.</p>
+                <div class="popup-button">
+                    <a href="https://github.com/seahorn/crab/tree/dev-decoupling" target="_blank">Link</a>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Implementation of Split Operator and Variable Oracles in Crab/Clam Static Analysis Framework</h3>
+                <p>Developed and implemented the split operator and variable oracles in the Crab/Clam static analysis
+                    framework, focusing on enhancing the accuracy/efficiency trade-off in static analysis.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Implementation of Likely Unconstrained Variable Oracles in Crab/Clam Static Analysis Framework</h3>
+                <p>Implemented likely unconstrained variable oracles in the Crab/Clam static analysis framework,
+                    providing a more efficient approach to handling unconstrained variables during analysis.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Implementation of a High-Level Linter for Data Science Based on Abstract Data Types in Lyra</h3>
+                <p>Developed a high-level linter for data science applications based on abstract data types within the
+                    Lyra framework, aimed at improving code quality and adherence to best practices in data science
+                    projects.</p>
+            </div>
+
+        </section>
+
+
+
+    </div>
+
+
+
+    <script>
+        // Get all show-summary buttons
+        const showSummaryButtons = document.querySelectorAll('.show-summary');
+
+        // Add event listener to each button
+        showSummaryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the target summary
+                const targetSummary = document.querySelector(button.dataset.target);
+
+                // Toggle the visibility of the summary
+                targetSummary.classList.toggle('visible');
+            });
+        });
+
+        // Get all close-summary buttons
+        const closeSummaryButtons = document.querySelectorAll('.close-summary');
+
+        // Add event listener to each button
+        closeSummaryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the parent summary
+                const parentSummary = button.parentNode;
+
+                // Toggle the visibility of the summary
+                parentSummary.classList.toggle('visible');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
