@@ -1,4 +1,6 @@
-/* Variables and Global Styles */
+/* ================================
+    Variables and Global Styles
+   ================================ */
 
 :root {
     --white: hsla(0, 0%, 100%, 1);
@@ -17,21 +19,33 @@
 
 * {
     box-sizing: border-box;
-    font-family: monospace, monospace, sans-serif;
+    font-family: monospace, sans-serif;
 }
-
-
 
 body {
     background-color: var(--white);
     color: var(--rich-black);
+    font-family: "Recta W01 Medium Condensed", serif;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* ================================
+    Focus States
+   ================================ */
 
 a:focus,
 button:focus {
     outline: 2px dashed var(--picton-blue);
 }
+
+/* ================================
+    Responsive Styles for Small Screens
+   ================================ */
 
 @media (max-width: 768px) {
     header {
@@ -46,17 +60,22 @@ button:focus {
     }
 }
 
+/* ================================
+    Typography and Information Display
+   ================================ */
+
 .institution,
 .date-range,
 .location,
 .marks {
     font-size: medium;
-    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    font-family: "Recta W01 Medium Condensed", serif;
     color: #666;
     margin-left: 1em;
     margin-bottom: 0.25em;
 }
 
+/* Prefix icons for certain information classes */
 .location::before {
     content: "📍";
 }
@@ -70,7 +89,7 @@ button:focus {
 }
 
 .marks::before {
-    content: "📚"
+    content: "📚";
 }
 
 .institution span,
@@ -78,26 +97,14 @@ button:focus {
 .location span,
 .marks span {
     font-size: smaller;
-    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    font-family: "Recta W01 Medium Condensed", serif;
     color: #666;
     margin-left: 1em;
 }
 
-/* Layout Styles */
-
-body {
-    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: var(--white);
-    color: var(--rich-black);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-/* Layout Styles */
+/* ================================
+    Layout Styles
+   ================================ */
 
 .container {
     display: flex;
@@ -105,7 +112,9 @@ body {
     height: 100vh;
 }
 
-/* Header Styles */
+/* ================================
+    Header Styles
+   ================================ */
 
 .header-left {
     display: flex;
@@ -136,47 +145,49 @@ header p {
     margin-bottom: 20px;
 }
 
-/* Hide header */
+/* Hide header when necessary */
 .header-hidden {
     display: none;
 }
 
+/* ================================
+    Responsive Header Styles
+   ================================ */
 
-/* Header when in portrait mode (vertical) */
-/* Header when in portrait mode (vertical) */
+/* Portrait Mode */
 @media (orientation: portrait) {
     header {
         width: 100%;
-        height: auto; /* Adjust height based on content */
+        height: auto;
         padding: 10px 0;
-        position: relative; /* Allows the header to scroll with content if necessary */
-        background-color: var(--white); /* Ensure visibility */
-        box-sizing: border-box; /* Include padding in height calculation */
-        display: flex; /* Enable flexbox layout */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-        z-index: 1000; /* Ensure header is on top of content */
-        transition: transform 0.3s ease; /* Smooth transition for hiding/showing */
+        position: relative;
+        background-color: var(--white);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+        transition: transform 0.3s ease;
     }
 
     .header-hidden {
-        transform: translateY(-100%); /* Slide header out of view */
+        transform: translateY(-100%);
     }
 
     .profile-pic {
-        width: 75px; /* Small profile picture */
+        width: 75px;
         height: 75px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--prussian-blue);
-        margin-bottom: 10px; /* Space between picture and name */
+        margin-bottom: 10px;
     }
 
     nav {
         width: 100%;
         display: flex;
-        justify-content: center; /* Center align navigation items */
-        flex-direction: column; /* Stack navigation items vertically */
+        justify-content: center;
+        flex-direction: column;
     }
 
     nav ul {
@@ -184,13 +195,13 @@ header p {
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
         width: 100%;
-        align-items: center; /* Center items */
+        align-items: center;
     }
 
     nav ul li {
-        margin: 5px 0; /* Space between navigation items */
+        margin: 5px 0;
     }
 
     nav ul li a {
@@ -199,8 +210,8 @@ header p {
         padding: 10px;
         text-decoration: none;
         transition: background-color 0.3s, transform 0.2s;
-        width: 100%; /* Full width for clickable area */
-        text-align: center; /* Center align text */
+        width: 100%;
+        text-align: center;
     }
 
     nav ul li a:hover {
@@ -211,61 +222,63 @@ header p {
     }
 
     .content {
-        margin-top: 20%; /* Adjust this value to ensure it pushes the content below the header */
+        margin-top: 20%;
         padding: 10px;
-        box-sizing: border-box; /* Include padding in height calculation */
-        overflow-y: auto; /* Enable vertical scrolling */
-        overflow-x: hidden; /* Disable horizontal scrolling */
-        height: calc(100vh - 20%); /* Adjust to fit the viewport minus header height */
-        position: relative; /* Keep content in normal flow */
-        z-index: 1; /* Ensure content is below the header */
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 20%);
+        position: relative;
+        z-index: 1;
     }
 }
 
-/* Header when in landscape mode (horizontal) */
+/* Landscape Mode */
 @media (orientation: landscape) {
     header {
-        width: 30%; /* Fixed width for landscape mode */
-        height: 100%; /* Full height */
+        width: 30%;
+        height: 100%;
         padding: 10px 0;
         flex-direction: column;
         border-right: 1px solid var(--prussian-blue);
-        border-bottom: none;
-        position: fixed; /* Keep the header fixed on the screen */
+        position: fixed;
         top: 0;
         left: 0;
-        background-color: var(--white); /* Ensure visibility */
-        display: flex; /* Enable flexbox layout */
-        align-items: center; /* Center items horizontally */
-        z-index: 1000; /* Ensure header is on top of content */
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        z-index: 1000;
     }
 
     .profile-pic {
-        width: 150px; /* Larger profile picture for landscape mode */
+        width: 150px;
         height: 150px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--prussian-blue);
-        margin-bottom: 20px; /* Space between picture and name */
+        margin-bottom: 20px;
     }
 
     .content {
-        margin-left: 30%; /* Ensure content is not hidden under the header */
+        margin-left: 30%;
         padding: 10px;
-        overflow-y: auto; /* Enable vertical scrolling */
-        overflow-x: hidden; /* Disable horizontal scrolling */
-        height: 100vh; /* Full viewport height */
-        box-sizing: border-box; /* Include padding in height calculation */
-        position: relative; /* Keep content in normal flow */
-        z-index: 1; /* Ensure content is below the header */
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
     }
 
     nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
+        flex-direction: column;
     }
 }
 
-/* Navigation Bar Styles */
+/* ================================
+    Navigation Bar Styles
+   ================================ */
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -292,69 +305,75 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-/* Content Styles */
+/* ================================
+    Content Section Styles
+   ================================ */
 
 .content {
     margin-top: 40px;
-    /* Margin to ensure content is not hidden under the header */
     padding: 10px;
     flex: 1;
     overflow-y: auto;
 }
 
-/* Section Styles */
-
+/* Section container */
 section {
     margin-bottom: 10px;
     padding: 12px;
     background-color: var(--white);
     border-radius: 1em;
-    box-shadow: 0 2px 1em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     color: var(--prussian-blue);
     border-bottom: 2px solid var(--cerulean);
-    padding-bottom: 10px; /* Reduced padding */
-    margin-bottom: 10px; /* Reduced margin */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 section h3 {
     display: list-item;
     margin-left: 1em;
     color: var(--rich-black);
-    margin-top: 15px; /* Reduced margin */
-    margin-bottom: 10px; /* Reduced margin */
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 section h4 {
     display: list-item;
     margin-left: 1em;
     color: var(--rich-black);
-    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
-    margin-top: 10px; /* Reduced margin */
-    margin-bottom: 10px; /* Reduced margin */
+    font-family: "Recta W01 Medium Condensed", serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify; 
+
 }
 
 section p {
     margin-left: 1em;
     font-family: "Recta W01 Medium Condensed", serif;
-    margin-top: 5px; /* Reduced margin */
-    margin-bottom: 5px; /* Reduced margin */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: justify; 
+
 }
 
-
-/* List Styles */
+/* ================================
+    List Styles
+   ================================ */
 
 ul {
     list-style-type: disc;
     margin-left: 20px;
 }
 
-/* Contact Icons Styles */
+/* ================================
+    Contact Icons Styles
+   ================================ */
 
 .contact {
     display: flex;
@@ -372,16 +391,17 @@ ul {
     vertical-align: middle;
 }
 
-
-/* Publication Buttons Styles */
+/* ================================
+    Publication Buttons Styles
+   ================================ */
 
 /* Popup Button Container */
 .popup-button {
     display: flex;
-    flex-wrap: nowrap; /* Prevent buttons from wrapping to new lines */
-    gap: 1em; /* Adjust gap between buttons if needed */
+    flex-wrap: nowrap;
+    gap: 1em;
     margin-top: 1em;
-    justify-content: center; /* Center align buttons */
+    justify-content: center;
 }
 
 /* Popup Button Styles */
@@ -404,13 +424,14 @@ ul {
     transform: scale(1.05);
 }
 
-
-/* Summary Styles */
+/* ================================
+    Summary Popup Styles
+   ================================ */
 
 .summary {
     display: none;
     background-color: #f8f8f8;
-    padding: 1em;
+    padding: 1.5em;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 1em;
@@ -420,6 +441,7 @@ ul {
     transition: max-height 0.3s ease-out;
     color: darkslategrey;
     font-weight: lighter;
+    text-align: justify; 
 }
 
 .summary.visible {
@@ -430,10 +452,11 @@ ul {
 
 .close-summary {
     position: absolute;
-    top: 4%;
-    right: 2%;
+    top: 10px;
+    right: 10px;
+    padding: auto;
     background-color: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
 }
