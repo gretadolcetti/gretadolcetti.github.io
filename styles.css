@@ -86,7 +86,7 @@ button:focus {
 /* Layout Styles */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
     line-height: 1.6;
     margin: 0;
     background-color: var(--white);
@@ -265,13 +265,7 @@ header p {
     }
 }
 
-
-
-
 /* Navigation Bar Styles */
-
-
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -301,7 +295,7 @@ nav ul li a:hover {
 /* Content Styles */
 
 .content {
-    margin-top: 70px;
+    margin-top: 40px;
     /* Margin to ensure content is not hidden under the header */
     padding: 10px;
     flex: 1;
@@ -316,7 +310,7 @@ section {
     background-color: var(--white);
     border-radius: 1em;
     box-shadow: 0 2px 1em rgba(0, 0, 0, 0.2);
-    width: calc(100% - 40px);
+    width: 100%;
     max-width: 1200px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
@@ -324,13 +318,16 @@ section {
 section h2 {
     color: var(--prussian-blue);
     border-bottom: 2px solid var(--cerulean);
-    padding-bottom: 5px;
+    padding-bottom: 10px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 section h3 {
     display: list-item;
     margin-left: 1em;
     color: var(--rich-black);
+    margin-top: 15px; /* Reduced margin */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 section h4 {
@@ -338,13 +335,16 @@ section h4 {
     margin-left: 1em;
     color: var(--rich-black);
     font-family: "Recta W01 Medium Condensed", "Recta W01 Medium Condensed", serif;
+    margin-top: 10px; /* Reduced margin */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 section p {
     margin-left: 1em;
     font-family: "Recta W01 Medium Condensed", serif;
+    margin-top: 5px; /* Reduced margin */
+    margin-bottom: 5px; /* Reduced margin */
 }
-
 
 
 /* List Styles */
@@ -430,8 +430,8 @@ ul {
 
 .close-summary {
     position: absolute;
-    top: 5px;
-    right: 1em;
+    top: 4%;
+    right: 2%;
     background-color: transparent;
     border: none;
     font-size: 20px;
