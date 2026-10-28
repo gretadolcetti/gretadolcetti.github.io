@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gretadolcetti.github.io/sitemap.xml
