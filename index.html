@@ -130,6 +130,7 @@
                         <li><a href="#education">Education</a></li>
                         <li><a href="#publications">Publications</a></li>
                         <li><a href="#work-experience">Work Experience & Teaching</a></li>
+                        <li><a href="#service">Talks & Service</a></li>
                         <!-- <li><a href="#teaching">Teaching</a></li> -->
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
@@ -157,14 +158,22 @@
                     include
                     static analysis, abstract interpretation, and, more broadly, formal methods for program verification
                     with a major focus on data science and artificial intelligence.
+                    My thesis, "Static Analysis for Unconventional Targets", applies static analysis to
+                    LLM-generated code and to data science pipelines.
                 </p>
                 <p>
                     During my Ph.D. studies, I have further enriched my research experience through
                     international research internships.
-                    In particular, I carried out a research internship at the École Normale Supérieure (Paris, France),
-                    where I worked on topics related to static analysis by abstract interpretation
-                    of data science and machine learning software, and a second research internship at
-                    IBM Research Dublin, focusing on the security of Generative AI (blue-teaming and guardrails).
+                    In particular, I was a visiting researcher in the ANTIQUE group (Inria &amp; École Normale
+                    Supérieure, Paris, France), where I worked on static analysis by abstract interpretation
+                    of data science and machine learning software and on verified explanations for neural networks.
+                    I then carried out two research internships at IBM Research Dublin: the first (2025) on the
+                    security of Generative AI (blue-teaming and guardrails for function-calling agents), the second
+                    (2026) on improving LLM generation of quantum programs through linter-guided repair.
+                </p>
+                <p>
+                    I co-organized the Generative Code Intelligence Workshop (ECAI 2025, IJCAI-ECAI 2026) and
+                    regularly serve on artifact evaluation committees.
                 </p>
             </section>
 
@@ -172,6 +181,10 @@
                 <h2>Education</h2>
                 <div class="education-item">
                     <h3>Ph.D. Student in Computer Science</h3>
+                    <p>Thesis: Static Analysis for Unconventional Targets - Analyzing LLM-Generated Code and Data
+                        Science Pipelines</p>
+                    <p>Advisors: Prof. Agostino Cortesi (Ca' Foscari), Prof. Enea Zaffanella and Prof. Vincenzo
+                        Arceri (University of Parma)</p>
                     <div class="institution">
                         <span>Ca' Foscari University of Venice</span>
                     </div>
@@ -180,6 +193,22 @@
                     </div>
                     <div class="location">
                         <span>Venice, Italy</span>
+                    </div>
+                    <div class="popup-button">
+                        <button class="show-summary" data-target="#phd-summary">Thesis Summary</button>
+                    </div>
+                    <div id="phd-summary" class="summary">
+                        <button class="close-summary">
+                            <span>&times;</span>
+                        </button>
+                        <p>The thesis applies static analysis to two unconventional targets.</p>
+                        <p>The first is code written by Large Language Models: an autonomous generate-verify-repair
+                            pipeline checks LLM-generated code for correctness and vulnerabilities before deployment,
+                            using testing and static analysis reports as feedback to repair it. This raised the
+                            correctness and safety of the generated code by 59% and 89% respectively.</p>
+                        <p>The second is data science code: Pyra, a static analyzer based on abstract interpretation,
+                            annotates programs through a domain of abstract data types and reports data science code
+                            smells that are caught neither at compile time nor at run time.</p>
                     </div>
                 </div>
 
@@ -278,6 +307,166 @@
 
             <section id="publications">
                 <h2>Publications</h2>
+                <p>17 publications, 8 as first author. Full list on
+                    <a href="https://scholar.google.com/citations?user=Wad3G5MAAAAJ&hl=it" target="_blank">Google Scholar</a>.</p>
+
+                <h4>Dolcetti, G., et al. (2026). Linter-Guided Repair of Quantum Code Smells. NeurIPS 2026 Workshop on Safe and Trustworthy Quantum Machine Learning (SaTQuML).</h4>
+                <div class="popup-button">
+                    <button class="show-summary" data-target="#bib-summary-18">BIB</button>
+                    <button class="show-summary" data-target="#abstract-summary-18">Abstract</button>
+                    <a href="https://openreview.net/forum?id=Q6uE2LmrH1" target="_blank">Link</a>
+                </div>
+                <div id="bib-summary-18" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>TBA</p>
+                </div>
+                <div id="abstract-summary-18" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>TBA</p>
+                </div>
+
+                <h4>Dolcetti, G., Zizzo, G., Arceri, V., Maffeis, S., & Cortesi, A. (2026). Quantum Computing and Static Analysis: State of the Art and Research Opportunities. Proceedings of the 11th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains (NSAD 2026), pp. 26-33.</h4>
+                <div class="popup-button">
+                    <button class="show-summary" data-target="#bib-summary-17">BIB</button>
+                    <button class="show-summary" data-target="#abstract-summary-17">Abstract</button>
+                    <a href="https://doi.org/10.1145/3840563.3843709" target="_blank">Link</a>
+                </div>
+                <div id="bib-summary-17" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>@inproceedings{Dolcetti_2026,
+  series={NSAD '26},
+  title={Quantum Computing and Static Analysis: State of the Art and Research Opportunities},
+  url={http://dx.doi.org/10.1145/3840563.3843709},
+  DOI={10.1145/3840563.3843709},
+  booktitle={Proceedings of the 11th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains},
+  publisher={ACM},
+  author={Dolcetti, Greta and Zizzo, Giulio and Arceri, Vincenzo and Maffeis, Sergio and Cortesi, Agostino},
+  year={2026},
+  month=oct,
+  pages={26--33}
+}</p>
+                </div>
+                <div id="abstract-summary-17" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>Due to its fast evolution, quantum computing is increasingly becoming a software problem, one that requires particular care because of the intrinsic peculiarities of quantum programs. Static analysis for quantum programs is still in its infancy. It has produced both principled semantic techniques and practical pattern-based linters, but the two are not connected yet, resulting in limited adoption. In this paper, we provide a concise presentation of the current state of the art, identify the challenges for static analysis of quantum programs, and propose a programmatic research agenda to address them, pairing each challenge with a concrete first step. Rather than surveying in depth existing analyses, this paper argues that the current generation of quantum static analysis tools is still missing the abstractions and infrastructures that enabled the success of static analysis for classical software. We identify these missing ingredients and outline a research roadmap for the next generation of quantum program analyzers.</p>
+                </div>
+
+                <h4>De Palma, A., Dolcetti, G., & Urban, C. (2026). Faster Verified Explanations for Neural Networks. 40th European Conference on Object-Oriented Programming (ECOOP 2026), LIPIcs, Volume 372, pp. 3:1-3:32.</h4>
+                <div class="popup-button">
+                    <button class="show-summary" data-target="#bib-summary-16">BIB</button>
+                    <button class="show-summary" data-target="#abstract-summary-16">Abstract</button>
+                    <a href="https://doi.org/10.4230/LIPIcs.ECOOP.2026.3" target="_blank">Link</a>
+                </div>
+                <div id="bib-summary-16" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>@inproceedings{depalma2026faster,
+  author={De Palma, Alessandro and Dolcetti, Greta and Urban, Caterina},
+  title={Faster Verified Explanations for Neural Networks},
+  booktitle={40th European Conference on Object-Oriented Programming (ECOOP 2026)},
+  series={Leibniz International Proceedings in Informatics (LIPIcs)},
+  volume={372},
+  pages={3:1--3:32},
+  publisher={Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  year={2026},
+  doi={10.4230/LIPIcs.ECOOP.2026.3}
+}</p>
+                </div>
+                <div id="abstract-summary-16" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>Verified explanations are a theoretically-principled way to explain the decisions taken by neural networks, which are otherwise black-box in nature. However, these techniques face significant scalability challenges, as they require multiple calls to neural network verifiers, each of them with an exponential worst-case complexity. We present FaVeX, a novel algorithm to compute verified explanations. FaVeX accelerates the computation by dynamically combining batch and sequential processing of input features, and by reusing information from previous queries, both when proving invariances with respect to certain input features, and when searching for feature assignments altering the prediction. Furthermore, we present a novel and hierarchical definition of verified explanations, termed verifier-optimal robust explanations, that explicitly factors the incompleteness of network verifiers within the explanation. Our comprehensive experimental evaluation demonstrates the superior scalability of both FaVeX, and of verifier-optimal robust explanations, which together can produce meaningful formal explanation on networks with hundreds of thousands of non-linear activations.</p>
+                </div>
+
+                <h4>Huang, Y., Hua, H., Zhou, Y., Jing, P., Nagireddy, M., Padhi, I., Dolcetti, G., ... & Zhang, X. (2026). Building a Foundational Guardrail for General Agentic Systems via Synthetic Data. The Fourteenth International Conference on Learning Representations (ICLR 2026).</h4>
+                <div class="popup-button">
+                    <button class="show-summary" data-target="#bib-summary-11">BIB</button>
+                    <button class="show-summary" data-target="#abstract-summary-11">Abstract</button>
+                    <a href="https://arxiv.org/pdf/2510.09781" target="_blank">Link</a>
+                </div>
+                <div id="bib-summary-11" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>@article{DBLP:journals/corr/abs-2510-09781,
+  author       = {Yue Huang and
+                  Hang Hua and
+                  Yujun Zhou and
+                  Pengcheng Jing and
+                  Manish Nagireddy and
+                  Inkit Padhi and
+                  Greta Dolcetti and
+                  Zhangchen Xu and
+                  Subhajit Chaudhury and
+                  Ambrish Rawat and
+                  Liubov Nedoshivina and
+                  Pin{-}Yu Chen and
+                  Prasanna Sattigeri and
+                  Xiangliang Zhang},
+  title        = {Building a Foundational Guardrail for General Agentic Systems via
+                  Synthetic Data},
+  journal      = {CoRR},
+  volume       = {abs/2510.09781},
+  year         = {2025},
+  url          = {https://doi.org/10.48550/arXiv.2510.09781},
+  doi          = {10.48550/ARXIV.2510.09781},
+  eprinttype    = {arXiv},
+  eprint       = {2510.09781},
+  timestamp    = {Tue, 16 Dec 2025 15:44:39 +0100},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2510-09781.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}</p>
+                </div>
+                <div id="abstract-summary-11" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>While LLM agents can plan multi-step tasks, intervening at the planning stage-before any action is executed-is often the safest way to prevent harm, since certain risks can lead to severe consequences once carried out. However, existing guardrails mostly operate post-execution, which is difficult to scale and leaves little room for controllable supervision at the plan level. To address this challenge, we highlight three critical gaps in current research: data gap, model gap, and evaluation gap. To close the data gap, we introduce AuraGen, a controllable engine that (i) synthesizes benign trajectories, (ii) injects category-labeled risks with calibrated difficulty, and (iii) filters outputs via an automated reward model, producing large and reliable corpora for pre-execution safety. To close the guardian model gap, we propose a foundational guardrail Safiron, combining a cross-planner adapter with a compact guardian model. The adapter unifies different input formats, while Safiron flags risky cases, assigns risk types, and generates rationales; trained in two stages with a broadly explored data recipe, Safiron achieves robust transfer across settings. To close the evaluation gap, we release Pre-Exec Bench, a realistic benchmark covering diverse tools and branching trajectories, which measures detection, fine-grained categorization, explanation, and cross-planner generalization in human-verified scenarios. Extensive experiments demonstrate consistent gains of the proposed guardrail over strong baselines on Pre-Exec Bench, and ablations further distill actionable practices, providing a practical template for safer agentic systems.</p>
+                </div>
+
+                <h4>Dolcetti, G., Arceri, V., Iotti, E., Maffeis, S., Cortesi, A., & Zaffanella, E. (2026). Helping LLMs improve code generation using feedback from testing and static analysis. Discover Artificial Intelligence, 6(1), 314.</h4>
+                <div class="popup-button">
+                    <button class="show-summary" data-target="#bib-summary-8">BIB</button>
+                    <button class="show-summary" data-target="#abstract-summary-8">Abstract</button>
+                    <a href="https://doi.org/10.1007/s44163-026-01009-5" target="_blank">Link</a>
+                </div>
+                <div id="bib-summary-8" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>@article{Dolcetti_2026_discover,
+  title={Helping LLMs improve code generation using feedback from testing and static analysis},
+  volume={6},
+  ISSN={2731-0809},
+  url={http://dx.doi.org/10.1007/s44163-026-01009-5},
+  DOI={10.1007/s44163-026-01009-5},
+  number={1},
+  pages={314},
+  journal={Discover Artificial Intelligence},
+  publisher={Springer Science and Business Media LLC},
+  author={Dolcetti, Greta and Arceri, Vincenzo and Iotti, Eleonora and Maffeis, Sergio and Cortesi, Agostino and Zaffanella, Enea},
+  year={2026},
+  month=mar
+}</p>
+                </div>
+                <div id="abstract-summary-8" class="summary">
+                    <button class="close-summary">
+                        <span>&times;</span>
+                    </button>
+                    <p>Large Language Models (LLMs) are one of the most promising developments in the field of artificial intelligence, and the software engineering community has readily noticed their potential role in the software development life-cycle. Developers routinely ask LLMs to generate code snippets, increasing productivity but also potentially introducing ownership, privacy, correctness, and security issues. Previous work highlighted how code generated by mainstream commercial LLMs is often not safe, containing vulnerabilities, bugs, and code smells. In this paper, we present a framework that leverages testing and static analysis to assess the quality, and guide the self-improvement, of code generated by general-purpose, open-source LLMs.
+First, we ask LLMs to generate C code to solve a number of programming tasks. Then we employ ground-truth tests to assess the (in)correctness of the generated code, and a static analysis tool to detect potential safety vulnerabilities. Next, we assess the models ability to evaluate the generated code, by asking them to detect errors and vulnerabilities. Finally, we test the models ability to fix the generated code, providing the reports produced during the static analysis and incorrectness evaluation phases as feedback.
+Our results show that models often produce incorrect code, and that the generated code can include safety issues. Moreover, they perform very poorly at detecting either issue. On the positive side, we observe a substantial ability to fix flawed code when provided with information about failed tests or potential vulnerabilities, indicating a promising avenue for improving the safety of LLM-based code generation tools.</p>
+                </div>
 
                 <h4>
 Dolcetti, G., Arceri, V., Mensi, A., Zaffanella, E., Urban, C., & Cortesi, A. (2026). PYRA: A High-level Linter for Data Science Software. Knowledge-Based Systems, 115412.</h4>
@@ -311,13 +500,13 @@ Dolcetti, G., Arceri, V., Mensi, A., Zaffanella, E., Urban, C., & Cortesi, A. (2
 </p>
                 </div>
 
-                <h4>Dolcetti, G., Zizzo, G., & Maffeis, S. (2026). Blue Teaming Function-Calling Agents. arXiv preprint arXiv:2601.09292. Accepted to appear at the AAAI 2026 Workshop on Trust and Control in Agentic AI (TrustAgent)</h4>
+                <h4>Dolcetti, G., Zizzo, G., & Maffeis, S. (2026). Blue Teaming Function-Calling Agents. AAAI 2026 Workshop on Trust and Control in Agentic AI (TrustAgent). arXiv preprint arXiv:2601.09292.</h4>
                 <div class="popup-button">
-                    <button class="show-summary" data-target="#bib-summary-14">BIB</button>
-                    <button class="show-summary" data-target="#abstract-summary-14">Abstract</button>
+                    <button class="show-summary" data-target="#bib-summary-15">BIB</button>
+                    <button class="show-summary" data-target="#abstract-summary-15">Abstract</button>
                     <a href="https://arxiv.org/pdf/2601.09292" target="_blank">Link</a>
                 </div>
-                <div id="bib-summary-14" class="summary">
+                <div id="bib-summary-15" class="summary">
                     <button class="close-summary">
                         <span>&times;</span>
                     </button>
@@ -328,30 +517,11 @@ Dolcetti, G., Arceri, V., Mensi, A., Zaffanella, E., Urban, C., & Cortesi, A. (2
   year={2026}
 }</p>
                 </div>
-                <div id="abstract-summary-14" class="summary">
+                <div id="abstract-summary-15" class="summary">
                     <button class="close-summary">
                         <span>&times;</span>
                     </button>
                     <p>We present an experimental evaluation that assesses the robustness of four open source LLMs claiming function-calling capabilities against three different attacks, and we measure the effectiveness of eight different defences. Our results show how these models are not safe by default, and how the defences are not yet employable in real-world scenarios.</p>
-                </div>
-
-                <h4>De Palma, A., Dolcetti, G., & Urban, C. (2025). Faster Verified Explanations for Neural Networks. arXiv preprint arXiv:2512.00164.</h4>
-                <div class="popup-button">
-                    <button class="show-summary" data-target="#bib-summary-14">BIB</button>
-                    <button class="show-summary" data-target="#abstract-summary-14">Abstract</button>
-                    <a href="https://arxiv.org/pdf/2512.00164" target="_blank">Link</a>
-                </div>
-                <div id="bib-summary-14" class="summary">
-                    <button class="close-summary">
-                        <span>&times;</span>
-                    </button>
-                    <p>N/A</p>
-                </div>
-                <div id="abstract-summary-14" class="summary">
-                    <button class="close-summary">
-                        <span>&times;</span>
-                    </button>
-                    <p>Verified explanations are a theoretically-principled way to explain the decisions taken by neural networks, which are otherwise black-box in nature. However, these techniques face significant scalability challenges, as they require multiple calls to neural network verifiers, each of them with an exponential worst-case complexity. We present FaVeX, a novel algorithm to compute verified explanations. FaVeX accelerates the computation by dynamically combining batch and sequential processing of input features, and by reusing information from previous queries, both when proving invariances with respect to certain input features, and when searching for feature assignments altering the prediction. Furthermore, we present a novel and hierarchical definition of verified explanations, termed verifier-optimal robust explanations, that explicitly factors the incompleteness of network verifiers within the explanation. Our comprehensive experimental evaluation demonstrates the superior scalability of both FaVeX, and of verifier-optimal robust explanations, which together can produce meaningful formal explanation on networks with hundreds of thousands of non-linear activations.</p>
                 </div>
 
                 <h4>Arceri, V., Bianchi, F., Dolcetti, G., & Zaffanella, E. (2025). Faster numeric static analyses with unconstrained variable oracles. PeerJ Computer Science, 11, e3390.</h4>
@@ -413,52 +583,6 @@ Dolcetti, G., Arceri, V., Mensi, A., Zaffanella, E., Urban, C., & Cortesi, A. (2
                         <span>&times;</span>
                     </button>
                     <p>Recent advances in Large Language Models (LLMs) have sparked significant interest in their application to code verification and the assessment of LLM-generated code safety. This review examines current research on the intersection of LLMs with software verification, focusing on two main aspects: the use of LLMs as verification tools and the verification of code produced by LLMs. We analyze the emerging approaches for integrating LLMs with traditional static analyzers and formal verification tools, including prompt engineering techniques and combinations with established verification frameworks. The review explores various verification methodologies, from standalone LLM applications to hybrid approaches incorporating traditional verification methods. We examine research addressing the safety assessment of LLM-generated code and investigate frameworks developed for vulnerability detection and repair. Through this analysis, we aim to provide insights into the current state of LLM applications in code verification, identify key challenges in the field, and outline important directions for future research in this rapidly evolving domain.</p>
-                </div>
-
-                <h4>Huang, Y., Hua, H., Zhou, Y., Jing, P., Nagireddy, M., Padhi, I., ... & Zhang, X. (2025). Building a Foundational Guardrail for General Agentic Systems via Synthetic Data. arXiv preprint arXiv:2510.09781.</h4>
-                <div class="popup-button">
-                    <button class="show-summary" data-target="#bib-summary-11">BIB</button>
-                    <button class="show-summary" data-target="#abstract-summary-11">Abstract</button>
-                    <a href="https://arxiv.org/pdf/2510.09781?" target="_blank">Link</a>
-                </div>
-                <div id="bib-summary-11" class="summary">
-                    <button class="close-summary">
-                        <span>&times;</span>
-                    </button>
-                    <p>@article{DBLP:journals/corr/abs-2510-09781,
-  author       = {Yue Huang and
-                  Hang Hua and
-                  Yujun Zhou and
-                  Pengcheng Jing and
-                  Manish Nagireddy and
-                  Inkit Padhi and
-                  Greta Dolcetti and
-                  Zhangchen Xu and
-                  Subhajit Chaudhury and
-                  Ambrish Rawat and
-                  Liubov Nedoshivina and
-                  Pin{-}Yu Chen and
-                  Prasanna Sattigeri and
-                  Xiangliang Zhang},
-  title        = {Building a Foundational Guardrail for General Agentic Systems via
-                  Synthetic Data},
-  journal      = {CoRR},
-  volume       = {abs/2510.09781},
-  year         = {2025},
-  url          = {https://doi.org/10.48550/arXiv.2510.09781},
-  doi          = {10.48550/ARXIV.2510.09781},
-  eprinttype    = {arXiv},
-  eprint       = {2510.09781},
-  timestamp    = {Tue, 16 Dec 2025 15:44:39 +0100},
-  biburl       = {https://dblp.org/rec/journals/corr/abs-2510-09781.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
-}</p>
-                </div>
-                <div id="abstract-summary-11" class="summary">
-                    <button class="close-summary">
-                        <span>&times;</span>
-                    </button>
-                    <p>While LLM agents can plan multi-step tasks, intervening at the planning stage-before any action is executed-is often the safest way to prevent harm, since certain risks can lead to severe consequences once carried out. However, existing guardrails mostly operate post-execution, which is difficult to scale and leaves little room for controllable supervision at the plan level. To address this challenge, we highlight three critical gaps in current research: data gap, model gap, and evaluation gap. To close the data gap, we introduce AuraGen, a controllable engine that (i) synthesizes benign trajectories, (ii) injects category-labeled risks with calibrated difficulty, and (iii) filters outputs via an automated reward model, producing large and reliable corpora for pre-execution safety. To close the guardian model gap, we propose a foundational guardrail Safiron, combining a cross-planner adapter with a compact guardian model. The adapter unifies different input formats, while Safiron flags risky cases, assigns risk types, and generates rationales; trained in two stages with a broadly explored data recipe, Safiron achieves robust transfer across settings. To close the evaluation gap, we release Pre-Exec Bench, a realistic benchmark covering diverse tools and branching trajectories, which measures detection, fine-grained categorization, explanation, and cross-planner generalization in human-verified scenarios. Extensive experiments demonstrate consistent gains of the proposed guardrail over strong baselines on Pre-Exec Bench, and ablations further distill actionable practices, providing a practical template for safer agentic systems.</p>
                 </div>
 
                 <h4>Dolcetti, G., Arceri, V., Mensi, A., Zaffanella, E., Urban, C., & Cortesi, A. (2025, September). Introducing Pyra: A High-Level Linter for Data Science Software. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (pp. 449-453). Cham: Springer Nature Switzerland.</h4>
@@ -536,46 +660,6 @@ on the application of state-of-the-art verification techniques and we highlight 
 a set of formal techniques that can be combined to achieve this goal. In principle, we advocate not only for a
 deeper adoption of formal methods in the machine learning development and deployment, but also for a more
 systematic and holistic approach.</p>
-                </div>
-
-                <h4>Dolcetti, G., Arceri, V., Iotti, E., Maffeis, S., Cortesi, A., & Zaffanella, E. (2024). Helping LLMs improve code generation using feedback from testing and static analysis. arXiv preprint arXiv:2412.14841.</h4>
-                <div class="popup-button">
-                    <button class="show-summary" data-target="#bib-summary-8">BIB</button>
-                    <button class="show-summary" data-target="#abstract-summary-8">Abstract</button>
-                    <a href="https://arxiv.org/abs/2412.14841" target="_blank">Link</a>
-                </div>
-                <div id="bib-summary-8" class="summary">
-                    <button class="close-summary">
-                        <span>&times;</span>
-                    </button>
-                    <p>@article{DBLP:journals/corr/abs-2412-14841,
-  author       = {Greta Dolcetti and
-                  Vincenzo Arceri and
-                  Eleonora Iotti and
-                  Sergio Maffeis and
-                  Agostino Cortesi and
-                  Enea Zaffanella},
-  title        = {Helping LLMs Improve Code Generation Using Feedback from Testing and
-                  Static Analysis},
-  journal      = {CoRR},
-  volume       = {abs/2412.14841},
-  year         = {2024},
-  url          = {https://doi.org/10.48550/arXiv.2412.14841},
-  doi          = {10.48550/ARXIV.2412.14841},
-  eprinttype    = {arXiv},
-  eprint       = {2412.14841},
-  timestamp    = {Fri, 04 Jul 2025 22:10:39 +0200},
-  biburl       = {https://dblp.org/rec/journals/corr/abs-2412-14841.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
-}</p>
-                </div>
-                <div id="abstract-summary-8" class="summary">
-                    <button class="close-summary">
-                        <span>&times;</span>
-                    </button>
-                    <p>Large Language Models (LLMs) are one of the most promising developments in the field of artificial intelligence, and the software engineering community has readily noticed their potential role in the software development life-cycle. Developers routinely ask LLMs to generate code snippets, increasing productivity but also potentially introducing ownership, privacy, correctness, and security issues. Previous work highlighted how code generated by mainstream commercial LLMs is often not safe, containing vulnerabilities, bugs, and code smells. In this paper, we present a framework that leverages testing and static analysis to assess the quality, and guide the self-improvement, of code generated by general-purpose, open-source LLMs.
-First, we ask LLMs to generate C code to solve a number of programming tasks. Then we employ ground-truth tests to assess the (in)correctness of the generated code, and a static analysis tool to detect potential safety vulnerabilities. Next, we assess the models ability to evaluate the generated code, by asking them to detect errors and vulnerabilities. Finally, we test the models ability to fix the generated code, providing the reports produced during the static analysis and incorrectness evaluation phases as feedback.
-Our results show that models often produce incorrect code, and that the generated code can include safety issues. Moreover, they perform very poorly at detecting either issue. On the positive side, we observe a substantial ability to fix flawed code when provided with information about failed tests or potential vulnerabilities, indicating a promising avenue for improving the safety of LLM-based code generation tools.</p>
                 </div>
 
                 <h4>Dolcetti G., Cortesi A., Urban C. & Zaffanella E. (2024). Towards a High Level Linter for Data
@@ -928,7 +1012,25 @@ Our results show that models often produce incorrect code, and that the generate
                 <div class="work-item">
                     <h3>Research Internship - AI Security & Privacy</h3>
                     <div class="institution">
-                        <span>IBM</span>
+                        <span>IBM Research</span>
+                    </div>
+                    <div class="location">
+                        <span>Dublin, Ireland</span>
+                    </div>
+                    <div class="date-range">
+                        <span>07/2026 - 10/2026</span>
+                    </div>
+                    <p>Second internship in the AI Security & Privacy team led by Mark Purcell (one of 2 interns
+                        selected from 200+ applicants). Topic: LLM generation of quantum programs.</p>
+                    <p>Improved LLM generation of quantum programs by 87% on Qiskit HumanEval and Qiskit Quantum Katas
+                        through an iterative Instruct-Validate-Repair (IVR) loop driven by feedback from the LintQ
+                        linter (first-author paper at the NeurIPS 2026 SaTQuML workshop). Improved the benchmarks,
+                        implemented a complete modular pipeline and integrated it into existing open-source tools.</p>
+                </div>
+                <div class="work-item">
+                    <h3>Research Internship - AI Security & Privacy</h3>
+                    <div class="institution">
+                        <span>IBM Research</span>
                     </div>
                     <div class="location">
                         <span>Dublin, Ireland</span>
@@ -936,22 +1038,30 @@ Our results show that models often produce incorrect code, and that the generate
                     <div class="date-range">
                         <span>05/2025 - 09/2025</span>
                     </div>
-                    <p>Worked in the AI Security & Privacy team led by Mark Purcell.
-Topic: Security of Generative AI (blue-teaming and guardrails).</p>
+                    <p>Worked in the AI Security & Privacy team led by Mark Purcell (one of 2 interns selected from
+                        200+ applicants). Topic: Security of Generative AI (blue-teaming and guardrails).</p>
+                    <p>Trained a LoRA adapter on Granite 3.3 8B that detects incorrect LLM function calls, released by
+                        IBM in the public granite-3.3-8b-security-lib on Hugging Face. Blue-teamed function-calling
+                        agents against tool-misuse attacks and designed the corresponding guardrails (first-author
+                        paper at the AAAI 2026 TrustAgent workshop). Contributed to a synthetic-data pipeline for
+                        foundational agent guardrails (ICLR 2026).</p>
                 </div>
                 <div class="work-item">
-                    <h3>Research Internship</h3>
+                    <h3>Visiting Researcher - ANTIQUE Group</h3>
                     <div class="institution">
-                        <span>Inria</span>
+                        <span>Inria & École Normale Supérieure</span>
                     </div>
                     <div class="location">
                         <span>Paris, France</span>
                     </div>
                     <div class="date-range">
-                        <span>09/2024 - 12/2024</span>
+                        <span>08/2024 - 12/2024</span>
                     </div>
-                    <p>Visiting Ph.D. student at Inria in the ANTIQUE research group, hosted at the École normale supérieure in Paris, France. <br>
+                    <p>Visiting Ph.D. student at Inria in the ANTIQUE research group, hosted at the École normale
+                        supérieure in Paris, France, under the supervision of Prof. Caterina Urban. <br>
                         Topic: static analysis by abstract interpretation of data science and machine learning software.</p>
+                    <p>Co-developed a faster method for computing formally verified explanations of neural networks,
+                        cutting verification cost by up to an order of magnitude (ECOOP 2026).</p>
                 </div>
                 <div class="work-item">
                     <h3>Research Scholarship</h3>
@@ -966,7 +1076,7 @@ Topic: Security of Generative AI (blue-teaming and guardrails).</p>
                     </div>
                     <p>Research by constraint programming and molecular modeling methods of possible protein mutations
                         of
-                        the SARS-CoV-2 virus.</p>
+                        the SARS-CoV-2 virus. The resulting workflow was published in Molecules (2023).</p>
                 </div>
                 <div class="teaching-item">
                     <h3>Teaching Assistant</h3>
@@ -1025,6 +1135,37 @@ Topic: Security of Generative AI (blue-teaming and guardrails).</p>
                         <span>Parma, Italy</span>
                     </div>
                     <p>Hours: 26</p>
+                </div>
+            </section>
+
+            <section id="service">
+                <h2>Talks & Service</h2>
+
+                <div class="work-item">
+                    <h3>Workshop Organization</h3>
+                    <p>Organizer of the Generative Code Intelligence Workshop at ECAI 2025 and IJCAI-ECAI 2026.</p>
+                </div>
+
+                <div class="work-item">
+                    <h3>Invited Talks</h3>
+                    <p>2026 - National University of Singapore (NUS).</p>
+                    <p>2025 - Dagstuhl Seminar 25421 on Sound Static Program Analysis in Modern Software Engineering.</p>
+                </div>
+
+                <div class="work-item">
+                    <h3>Artifact Evaluation Committees</h3>
+                    <p>VMCAI 2027, SAS 2026, VMCAI 2026, ECOOP 2024, ATVA 2024, SAS 2024, SAS 2023.</p>
+                </div>
+
+                <div class="work-item">
+                    <h3>Program Committees</h3>
+                    <p>AI4DT&CP @ IJCAI 2024.</p>
+                </div>
+
+                <div class="work-item">
+                    <h3>Outreach</h3>
+                    <p>Mentored high-school girls in STEM through the Ragazze Digitali coding program (2022-2023, 96
+                        hours in total).</p>
                 </div>
             </section>
 
@@ -1121,6 +1262,10 @@ Topic: Security of Generative AI (blue-teaming and guardrails).</p>
                         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
                             alt="linux" width="40" height="40" />
                     </a>
+                    <a href="https://www.gnu.org/software/bash/" target="_blank">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg"
+                            alt="bash" width="40" height="40" />
+                    </a>
                     <a href="https://www.latex-project.org/" target="_blank">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="latex"
                             width="40" height="40" />
@@ -1174,6 +1319,16 @@ Topic: Security of Generative AI (blue-teaming and guardrails).</p>
                             height="40" />
                     </a>
                 </p>
+                <p>LLM tooling: Hugging Face transformers, PEFT, vLLM, LangChain.</p>
+
+                <h3>Research Areas</h3>
+                <p>LLMs for Code Generation, AI Safety &amp; Guardrails, Static Analysis, Abstract Interpretation.</p>
+
+                <h3>Knowledge</h3>
+                <p>Artificial Intelligence, Machine Learning, Prompt Engineering, Data Science.</p>
+
+                <h3>Spoken Languages</h3>
+                <p>Italian (Native), English (Fluent).</p>
 
                 <!-- <h3>Web</h3>
                 <p>
@@ -1199,7 +1354,7 @@ Topic: Security of Generative AI (blue-teaming and guardrails).</p>
                     <h3>Integration of PPLite Domains in Crab/Clam Static Analysis Framework</h3>
                     <p>Contributed to the Crab/Clam static analysis framework by integrating PPLite domains, enhancing
                         the
-                        framework's capabilities for abstract interpretation.</p>
+                        framework's capabilities for abstract interpretation (PR #52, merged).</p>
                     <div class="popup-button">
                         <a href="https://github.com/seahorn/crab" target="_blank">Link</a>
                     </div>
@@ -1219,7 +1374,8 @@ Topic: Security of Generative AI (blue-teaming and guardrails).</p>
                     </h3>
                     <p>Developed and implemented the split operator and variable oracles in the Crab/Clam static
                         analysis
-                        framework, focusing on enhancing the accuracy/efficiency trade-off in static analysis.</p>
+                        framework, focusing on enhancing the accuracy/efficiency trade-off in static analysis, with
+                        2.27x and 2.24x analysis speedups (SAS 2023 / STTT 2024).</p>
                 </div>
 
                 <div class="project-item">
@@ -1234,9 +1390,20 @@ Topic: Security of Generative AI (blue-teaming and guardrails).</p>
                     <p>Developed a high-level linter for data science applications based on abstract data types within
                         the
                         Lyra framework, aimed at improving code quality and adherence to best practices in data science
-                        projects.</p>
+                        projects. I am its lead developer; Pyra detects 16 categories of data science code smells that
+                        general-purpose Python linters miss (Knowledge-Based Systems 2026, demoed at ECML PKDD 2025).</p>
                      <div class="popup-button">
                         <a href="https://github.com/spangea/Pyra" target="_blank">Link</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Granite 3.3 8B Function-Calling Guardrail (LoRA Adapter)</h3>
+                    <p>Trained a LoRA adapter on IBM Granite 3.3 8B that flags incorrect function calls produced by
+                        LLM agents. The adapter is released by IBM in the public granite-3.3-8b-security-lib model
+                        library on Hugging Face.</p>
+                    <div class="popup-button">
+                        <a href="https://huggingface.co/ibm-granite/granite-3.3-8b-security-lib" target="_blank">Link</a>
                     </div>
                 </div>
 
