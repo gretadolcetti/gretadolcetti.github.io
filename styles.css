@@ -21,6 +21,8 @@
     --summary-text: darkslategrey;
     --border: #ddd;
     --shadow: rgba(0, 0, 0, 0.1);
+    --icon-filter: none;
+    --logo-chip: transparent;
     color-scheme: light dark;
     --gradient-top: linear-gradient(0deg,
             var(--white),
@@ -30,8 +32,9 @@
             var(--picton-blue));
 }
 
+/* Dark theme: follows the system unless the visitor picked a theme with the toggle */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --bg: hsl(205, 40%, 8%);
         --surface: hsl(205, 35%, 12%);
         --surface-alt: hsl(205, 30%, 16%);
@@ -42,19 +45,44 @@
         --summary-text: hsl(205, 15%, 80%);
         --border: hsl(205, 20%, 26%);
         --shadow: rgba(0, 0, 0, 0.5);
+        --icon-filter: invert(1);
+        --logo-chip: hsl(0, 0%, 96%);
     }
+}
 
-    /* The contact icons are black: turn them white */
-    .contact-icon {
-        filter: invert(1);
-    }
+:root[data-theme="dark"] {
+    --bg: hsl(205, 40%, 8%);
+    --surface: hsl(205, 35%, 12%);
+    --surface-alt: hsl(205, 30%, 16%);
+    --text: hsl(205, 20%, 90%);
+    --heading: hsl(197, 80%, 75%);
+    --link: hsl(197, 100%, 62%);
+    --muted: hsl(205, 12%, 65%);
+    --summary-text: hsl(205, 15%, 80%);
+    --border: hsl(205, 20%, 26%);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --icon-filter: invert(1);
+    --logo-chip: hsl(0, 0%, 96%);
+}
 
-    /* Many logos are dark: show them on a light chip */
-    #skills img {
-        background-color: hsl(0, 0%, 96%);
-        border-radius: 6px;
-        padding: 3px;
-    }
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+/* The contact icons are black: turned white in the dark theme */
+.contact-icon {
+    filter: var(--icon-filter);
+}
+
+/* Many logos are dark: in the dark theme they sit on a light chip */
+#skills img {
+    background-color: var(--logo-chip);
+    border-radius: 6px;
+    padding: 3px;
 }
 
 * {
@@ -644,4 +672,25 @@ section p a {
 /* No underline under the skill logos (it shows on the whitespace between them) */
 #skills a {
     text-decoration: none;
+}
+
+/* ================================
+    Theme Toggle
+   ================================ */
+
+.theme-toggle {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background-color: var(--surface);
+    color: var(--heading);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    border-color: var(--link);
 }

@@ -118,6 +118,15 @@
     }
     </script>
     
+    <script>
+        // Apply the theme saved by the toggle before the page is painted
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                document.documentElement.dataset.theme = savedTheme;
+            }
+        } catch {}
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://db.onlinewebfonts.com/c/e43ccd3c2c2c13628d86f0b1b5a580d3?family=Recta+W01+Medium+Condensed"
         rel="stylesheet">
@@ -153,6 +162,7 @@
                         <a href="assets/cv.pdf" target="_blank" rel="noopener" aria-label="CV (PDF)" title="CV (PDF)">
                             <img src="assets/cv-icon.png" alt="" class="contact-icon" width="30" height="30">
                         </a>
+                        <button type="button" class="theme-toggle"></button>
                     </div>
                 </div>
             </div>
@@ -1421,6 +1431,28 @@
                 </div>
 
                 <div class="project-item">
+                    <h3>Test-Suite Validation for the Qiskit IVR Example in Mellea</h3>
+                    <p>Added test-suite validation to the Qiskit Instruct-Validate-Repair (IVR) example of Mellea, a
+                        library for writing generative programs. Generated Qiskit code is run against the benchmark's
+                        own test suite (Qiskit HumanEval, Quantum Katas) and any failure is fed back to the LLM as the
+                        repair reason (PR #1716, merged).</p>
+                    <div class="popup-button">
+                        <a href="https://github.com/generative-computing/mellea/pull/1716" target="_blank" rel="noopener">Link</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>LintQ Validator for CodeHelm</h3>
+                    <p>Added a LintQ-based validator to IBM's CodeHelm: generated Qiskit code is first checked against
+                        its tests and, if correct, analysed with the LintQ quantum linter (via CodeQL). The validator is
+                        integrated in the Mellea orchestration pipeline, with a runnable example and 9 tests (PR #2,
+                        merged).</p>
+                    <div class="popup-button">
+                        <a href="https://github.com/IBM/codehelm/pull/2" target="_blank" rel="noopener">Link</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
                     <h3>Points Tracking System for Italian Card Game "Briscola a 5" </h3>
                     <p>Developed a points tracking system for the Italian card game "Briscola a 5", enabling players to easily keep track of scores and manches during gameplay.
 
@@ -1549,7 +1581,40 @@
                 });
             }
 
+            // Function to switch between the light and dark theme
+            function handleThemeToggle() {
+                const toggle = document.querySelector('.theme-toggle');
+                const root = document.documentElement;
+                const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+                const currentTheme = () => root.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+
+                // Show the icon of the theme the button switches to
+                const updateToggle = () => {
+                    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+                    toggle.textContent = next === 'dark' ? '\u263E' : '\u2600';
+                    toggle.setAttribute('aria-label', `Switch to ${next} mode`);
+                    toggle.title = `Switch to ${next} mode`;
+                    document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
+                        meta.content = getComputedStyle(root).getPropertyValue('--bg').trim();
+                    });
+                };
+
+                toggle.addEventListener('click', () => {
+                    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+                    root.dataset.theme = next;
+                    try {
+                        localStorage.setItem('theme', next);
+                    } catch {}
+                    updateToggle();
+                });
+
+                // Follow system changes while the visitor has not picked a theme
+                systemDark.addEventListener('change', updateToggle);
+                updateToggle();
+            }
+
             // Call the functions to set up the event listeners
+            handleThemeToggle();
             handleSummaryButtons();
             handleCopyBibtex();
             handlePublicationFilter();
